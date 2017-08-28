@@ -1,7 +1,30 @@
 {
   "index_name": "realm-io",
   "start_urls": [
-    "https://realm.io/docs/"
+    {
+      "url": "https://realm.io/docs/",
+      "tags": [
+        "en"
+      ]
+    },
+    {
+      "url": "https://realm.io/kr/docs/",
+      "tags": [
+        "kr"
+      ]
+    },
+    {
+      "url": "https://realm.io/cn/docs/",
+      "tags": [
+        "cn"
+      ]
+    },
+    {
+      "url": "https://realm.io/jp/docs/",
+      "tags": [
+        "jp"
+      ]
+    }
   ],
   "stop_urls": [
     "api",
@@ -14,8 +37,8 @@
   ],
   "selectors": {
     "lvl0": {
-      "selector": "",
-      "default_value": "Documentation"
+      "selector": "a.doc-section-header.active",
+      "global": true
     },
     "lvl1": ".docs-body h2",
     "lvl2": ".docs-body h3",
@@ -24,5 +47,5 @@
     "text": ".docs-body p, .docs-body li"
   },
   "min_indexed_level": 2,
-  "nb_hits": 4620
+  "nb_hits": 19024
 }
